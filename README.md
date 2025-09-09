@@ -3,6 +3,9 @@
 - Software Engineer
 - Studied Computer Science and Engineering at [North South University](https://www.northsouth.edu/)
 
+## Assets
+- [Résumé](./CV.pdf)
+
 ## Preferred Languages
 
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
