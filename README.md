@@ -4,6 +4,7 @@
 - Studied Computer Science and Engineering at [North South University](https://www.northsouth.edu/)
 
 ## Assets
+- [About Me](https://asaduzzaman-noor.com/about-me)
 - [Résumé](./CV.pdf)
 
 ## Preferred Languages
