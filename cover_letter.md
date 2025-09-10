@@ -34,4 +34,5 @@ I’d welcome the chance to discuss how I can help [Company Name] ship fast, obs
 Sincerely,
 
 Asaduzzaman Noor
+
 Software Engineer
