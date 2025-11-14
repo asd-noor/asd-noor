@@ -1,0 +1,337 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: Michael Lustfield
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+
+\documentclass[letterpaper,10pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN_FILE: mteck.sty
+%% NOTE: Everything between here and END_FILE can
+%% be relocated to "mteck.sty" and then included with:
+%\usepackage{mteck}
+
+% Dependencies
+% NOTE: Some packages (lastpage, hyperref) require second build!
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+% Sans-Serif
+%\usepackage[sfdefault]{FiraSans}
+%\usepackage[sfdefault]{roboto}
+%\usepackage[sfdefault]{noto-sans}
+%\usepackage[default]{sourcesanspro}
+
+% Serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% Colors
+% Use with \color{Name}
+% Can wrap entire heading with {\color{accent} [...] }
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+% Misc. Options
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+% Adjust Margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+% ATS Readability
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%-----------------%
+% Custom Commands %
+%-----------------%
+
+% Centered title along with subtitle between HR
+% Usage: \documentTitle{Name}{Details}
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    %{\footnotesize\color{accentTitle} #2}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+% Create a footer with correct padding
+% Usage: \documentFooter{\thepage of X}
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+% Simple wrapper to set up page numbering
+% Usage: \numberedPages
+% WARNING: Must run pdflatex twice!
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+% Section heading with horizontal rule
+% Usage: \section{Title}
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+% Section heading with separator and content on same line
+% Usage: \tinysection{Title}
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+% Indented line with arguments left/right aligned in document
+% Usage: \heading{Left}{Right}
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+% Adds \textbf to \heading
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+% Adds \textit to \heading
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+% Template for itemized lists
+% Usage: \begin{resume_list} [items] \end{resume_list}
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+  %\vspace{-2pt}
+}
+
+% Formats an item to use as an itemized title
+% Usage: \itemTitle{Title}
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+% Bullets used in itemized lists
+\renewcommand\labelitemi{--}
+
+%% END_FILE: mteck.sty
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%===================%
+% John Doe's Resume %
+%===================%
+
+%\numberedPages % NOTE: lastpage requires a second build
+%\documentFooter{\thepage of 2} % Does similar without using lastpage
+\begin{document}
+
+  %---------%
+  % Heading %
+  %---------%
+
+  \documentTitle{Asaduzzaman Noor}{
+    % Web Version
+    %\raisebox{-0.05\height} \faPhone\ [redacted - web copy] ~
+    %\raisebox{-0.15\height} \faEnvelope\ [redacted - web copy] ~
+    %%
+    \href{tel:+8801756214236}{
+      \raisebox{-0.05\height} \faPhone\ +880 17 56 214 236} ~ | ~
+    \href{mailto:asad.noor.antor@gmail.com}{
+      \raisebox{-0.15\height} \faEnvelope\ asad.noor.antor@gmail.com} ~ | ~
+    \href{https://www.linkedin.com/in/asd-noor/}{
+      \raisebox{-0.15\height} \faLinkedin\ linkedin.com/in/asd-noor} ~ | ~
+    \href{https://github.com/asd-noor}{
+      \raisebox{-0.15\height} \faGithub\ github.com/asd-noor}
+  }
+
+  %---------%
+  % Summary %
+  %---------%
+
+  % \tinysection{Summary}
+  \begin{center}
+  \emph{Engineer crafting high-performance systems with automation — where efficiency meets intelligent design.}
+  \end{center}
+
+  \section{Brief}
+
+I’m a Backend Engineer who thrives on building lean, high-performance distributed systems. While I can navigate the frontend when needed, my real passion lies deep in system programming and Linux internals. With hands-on experience in Go, Kubernetes, AWS, GCP, and scalable architectures, I focus on crafting resilient, efficient solutions and automating everything possible. Lately, I’ve been diving into Machine Learning—exploring, using, and even building AI tools that push the limits of intelligent automation.
+
+  %--------%
+  % Skills %
+  %--------%
+
+  \section{Skills}
+
+  \begin{multicols}{2}
+    \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=75pt]
+      \item[\textbf{Languages}] Go, Python, JavaScript, Zig, Bash
+      \item[\textbf{Frameworks}] Echo, React, TailwindCSS. Templ (Go)
+      \item[\textbf{Databases}] PostgreSQL, Redis/KeyDB, DynamoDB, Elasticsearch, InfluxDB
+      \item[\textbf{Message Brokers}] Asynq (Go), NATS
+      \item[\textbf{Infrastructure}] Kubernetes, Docker, Pulumi/Terraform, Linux
+      \item[\textbf{Observability}] Grafana, Prometheus, Loki
+      \item[\textbf{Cloud Platform}] AWS, GCP
+    \end{itemize}
+  \end{multicols}
+
+  %------------%
+  % Experience %
+  %------------%
+
+  \section{Experience}
+
+  \headingBf{Vivasoft Limited}{Aug 2022 -- Present}
+  \headingIt{Software Engineer}{}
+  % \vspace{5pt}
+  \begin{resume_list}
+    \itemTitle{\textit{\textcolor{blue}{\href{https://klikit.io}{Klikit}}}}
+    \item Microservice to handle uploading files to GCS, as well as image conversion and resizing.
+    \item Microservice to send emails with MailGun.
+    \item Microservice to send SMS and WhatsApp messages to users.
+    \item Integrate Third-Party Platform to Klikit.
+    \item Collaborated with other microservices as necessary.
+    \item \textit{Tech Stack: Go, MySQL, Docker, Kubernetes, AWS EKS, GCP GCS, MailGun}
+
+   % \vspace{5pt}
+    
+    \itemTitle{\textit{\textcolor{blue}{\href{https://hink.me}{Hink}}}}
+    \item Refactored the project with Clean Architecture principle.
+    \item Fixed bugs.
+    \item Deployed a lambda for handling media post-processing.
+    \item \textit{Tech Stack: Go, MySQL, Elasticsearch, Docker, Kubernetes, AWS S3, GCP GKE, Google Maps API}
+    
+    % \vspace{5pt}
+    
+    \itemTitle{\textit{\textcolor{blue}{\href{https://apps.apple.com/us/app/circle-socials/id6476143567}{Circle}}}}
+    \item Refactored DynamoDB table design for better indexing and faster data retrieval as well as reducing read/write costs.
+    \item Improved user feed.
+    \item Automated place registrations from user pings.
+    \item User management features for admin.
+    \item \textit{Tech Stack: Go, AWS DynamoDB, Docker Swarm, AWS EC2, AWS SES, Google Maps API}
+
+    \vspace{5pt}
+
+    \itemTitle{\textit{GPS Server (Part of backend for Sister Concerns)}}
+    \item Redesigned the software architecture to an more efficient version. (R\&D)
+    \item Improved DB Design.
+    \item Added real-time tracking and analytics.
+    \item \textit{Tech Stack: Go, PostgreSQL (TimescaleDB), Redis}
+
+    \vspace{5pt}
+    
+    \itemTitle{\textit{Anonymous Feedback System}}
+    \item Designed and implemented a secure feedback system with untraceable Google login.
+    \item Designed UI and Portal, segregated by user type.
+    \item \textit{Tech Stack: Go, PostgreSQL, JavaScript (React)}
+
+    \vspace{5pt}
+    
+    \itemTitle{\textit{Mock Server}}
+    \item Designed and implemented a multi-tenant mock server which enables live HTTP request for Frontend teams until the Backend is ready.
+    \item \textit{Tech Stack: Go, PostgreSQL, JavaScript (React)}
+
+    \vspace{5pt}
+    
+    \itemTitle{\textit{SIP Server}}
+    \item Designed and implemented a horizontally scalable SIP Server for Telecommunication System.
+    \item Added geo-restrictions, rate limiting.
+    \item Added Monitoring and Analytics for calls and server.
+    \item Added voice mail and email notification support.
+    \item \textit{Tech Stack: Asterisk, OpenSIPS, RTPEngine, PostFix Relay, MySQL, PostgreSQL, Traefik, Kubernetes}
+  \end{resume_list}
+
+
+
+  %-----------%
+  % Education %
+  %-----------%
+
+  \section{Education}
+
+  \headingBf{North South University, BD}{2021} % Note: Adding year(s) exposes an implied age
+  \headingIt{Bachelor of Science in Computer Science and Engineering}{}
+  
+  % \headingBf{Certifications}{}
+  % \begin{resume_list}
+  %  \item Salt \hspace{2pt}- SaltStack Certified Engineer
+  %  \item GCP - Professional Cloud Architect
+  % \end{resume_list}
+
+  %----------------------------%
+  % Extracurricular Activities %
+  %----------------------------%
+
+  \vspace{5pt}
+
+  \section{Publications}
+  \begin{resume_list}
+      \item Patch-Wise Semantic Segmentation of Sedimentation from High-Resolution Satellite Images Using Deep Learning --- \textcolor{blue}{\emph{\href{https://link.springer.com/chapter/10.1007/978-3-030-85030-2_41}{Springer - 2021}}} 
+      \item Effect of Label Noise on Multi-Class Semantic Segmentation: A Case Study on Bangladesh Marine Region --- \textcolor{blue}{\emph{\href{https://www.tandfonline.com/doi/full/10.1080/08839514.2022.2039348}{Taylor \& Francis - 2022}}} 
+  \end{resume_list}
+
+%   \vspace{5pt}
+
+  \section{Projects}
+
+  % \headingBf{AirBNB (clone)}{2024}
+  % \begin{resume_list}
+  %   \item Project Planning
+  %   \item Project Scope: Admin, User Registration, Search Apartments, Register Apartments, Book Apartments.
+  %   \item Future scopeing to extend it with Kubernetes and DB management.
+  %   \item \textit{Tech Stack: Go, Redis, MySQL, Alpine.js, Alpine-AJAX}
+  % \end{resume_list}
+
+  \headingBf{Inventory Management \& Ledger \textit{(Personal Paid Project)}}{Jan 2022}
+  \begin{resume_list}
+    \item Desktop App: built with Rust (Tauri), ReactJS, SQLite 
+  \end{resume_list}
+
+  \headingBf{Local Memory Agent for universal LLMs}{Oct 2025}
+  \begin{resume_list}
+    \item MCP Server: Provides tools for efficiently storing and retrieving general memory, project context for AI tools.
+    \item \textit{Tech Stack: Python (Pydantic AI, MemVid)}
+  \end{resume_list}
+
+\end{document}
+
