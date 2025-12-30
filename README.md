@@ -6,7 +6,7 @@
 ## Assets
 - [About Me](https://asaduzzaman-noor.com/about-me)
 - [Résumé](./CV.pdf)
-- Reach me at [asad.noor.antor@gmail.com](mailto:asad.noor.antor@gmail.com)
+- Reach me at [mail@asaduzzaman-noor.com](mailto:mail@asaduzzaman-noor.com)
 
 ## Preferred Languages
 
