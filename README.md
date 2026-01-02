@@ -23,10 +23,13 @@
 ![AmazonDynamoDB](https://img.shields.io/badge/Amazon%20DynamoDB-4053D6?style=for-the-badge&logo=Amazon%20DynamoDB&logoColor=white)
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
-## Frontend Libraries
+## UI
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Templ](https://img.shields.io/badge/Templ-yellow?style=for-the-badge&logo=go)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Alpine.js](https://img.shields.io/badge/Alpine.js-2596be?style=for-the-badge&logo=javascript)
+![Alpine AJAX](https://img.shields.io/badge/Alpine%20AJAX-2596be?style=for-the-badge&logo=javascript)
+![Bubbletea](https://img.shields.io/badge/Bubbletea-6953fd?style=for-the-badge&logo=go)
 
 ## Infrastructure
 
