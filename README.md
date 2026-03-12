@@ -29,6 +29,7 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Alpine.js](https://img.shields.io/badge/Alpine.js-2d3441?style=for-the-badge&logo=htmx)
 ![Alpine AJAX](https://img.shields.io/badge/Alpine%20AJAX-red?style=for-the-badge&logo=htmx)
+![Gio UI](https://img.shields.io/badge/Gio_UI-black?style=for-the-badge&logo=go)
 ![Bubbletea](https://img.shields.io/badge/Bubbletea-6953fd?style=for-the-badge&logo=go)
 
 ## Infrastructure
